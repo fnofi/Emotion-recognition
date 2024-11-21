@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ChatActivity">
+    <Button
+        android:id="@+id/button_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/close_img"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="23dp"
+        android:clickable="true"
+        />
+    <!-- RecyclerView для отображения списка сообщений -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMessages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/inputMessageLayout"
+        android:padding="8dp"
+        android:clipToPadding="false"/>
+
+    <!-- Поле ввода нового сообщения -->
+    <RelativeLayout
+        android:id="@+id/inputMessageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/buttonSendMessage"
+            android:hint="Введите сообщение..."
+            android:imeOptions="actionSend"
+            android:maxLines="3" />
+
+        <Button
+            android:id="@+id/buttonSendMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="Отправить" />
+        <Button
+            android:id="@+id/buttonBlockUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Разблокировать пользователя"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/blockTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Вас заблокировали"
+            android:textColor="@color/textColor"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</RelativeLayout>

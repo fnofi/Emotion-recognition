@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front.autofocus"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Face_test"
+        tools:targetApi="31">
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false"
+            android:label="Чат"/>
+        <activity
+            android:name=".ChatsActivity"
+            android:exported="false"
+            android:label="Сообщения"/>
+        <activity
+            android:name=".DriverFaceRecognitionActivity"
+            android:exported="false"
+            android:label="Анализ лица водителя" />
+        <activity
+            android:name=".CogniTestResultActivity"
+            android:exported="false"
+            android:label="@string/cogni_test" />
+        <activity
+            android:name=".CogniTestActivity"
+            android:exported="false"
+            android:label="@string/cogni_test" />
+        <activity
+            android:name=".TestResultActivity"
+            android:exported="false"
+            android:label="@string/emotion_test" />
+        <activity
+            android:name=".TestActivity"
+            android:exported="false"
+            android:label="@string/emotion_test" />
+        <activity
+            android:name=".RegistrationActivity"
+            android:exported="false"
+            android:label="@string/registration" />
+        <activity
+            android:name=".SocialAnxietyActivity"
+            android:exported="false"
+            android:label="@string/social_anxiety" />
+        <activity
+            android:name=".HypochondriaActivity"
+            android:exported="false"
+            android:label="@string/hypochondria" />
+        <activity
+            android:name=".ObsessionsActivity"
+            android:exported="false"
+            android:label="@string/obsessions" />
+        <activity
+            android:name=".PanicAttacksActivity"
+            android:exported="false"
+            android:label="@string/panic_attacks" />
+        <activity
+            android:name=".IndividualPhobiasActivity"
+            android:exported="false"
+            android:label="@string/individual_phobias" />
+        <activity
+            android:name=".GeneralWorryActivity"
+            android:exported="false"
+            android:label="@string/general_worry" />
+        <activity
+            android:name=".AnxietiesActivity"
+            android:exported="false"
+            android:label="@string/anxieties" />
+        <activity
+            android:name=".CardsActivity"
+            android:exported="false"
+            android:label="@string/cards" />
+        <activity
+            android:name=".speech_recognition_result"
+            android:exported="false"
+            android:label="@string/voice_recognizer" />
+        <activity
+            android:name=".speech_emotion_recognizer"
+            android:exported="false"
+            android:label="@string/voice_recognizer" />
+        <activity
+            android:name=".MainEmotionRecognitionResult"
+            android:exported="false"
+            android:label="@string/face_emotion" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/face_emotion" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="true"
+            android:label="@string/title_activity_main2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

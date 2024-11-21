@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:id="@+id/tableLayout"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp">
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Предполагаемые эмоции"
+                        android:gravity="center"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Фактические эмоции"
+                        android:gravity="center"
+                        android:textStyle="bold" />
+                </TableRow>
+            </TableLayout>
+            <Button
+                android:id="@+id/button_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exitText"
+                android:layout_below="@+id/tableLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:clickable="true"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/button_close"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/note"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/textColor"
+                android:layout_below="@+id/button_close"
+                android:textSize="14sp"
+                android:justificationMode="inter_word"
+                android:layout_marginHorizontal="20dp"
+                android:id="@+id/textView_note"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/textView_note"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
